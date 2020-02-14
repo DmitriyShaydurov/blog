@@ -1,0 +1,21 @@
+{
+    "name": "shaydurov/blog",
+    "description": "simple OOP example",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DmitriyShaydurov",
+            "email": "DmitriyShaydurov@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "shaydurov\\blog\\": "lib/"
+        }
+    }
+}
