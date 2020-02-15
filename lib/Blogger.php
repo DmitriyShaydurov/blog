@@ -20,6 +20,7 @@ abstract class Blogger
     {
         $this->db = new Db();
         $blogger = $this->db->getBlogger($id);
+
         if ($this->isCorrectId($id)) {
             $this->id = $id;
             $this->name = $blogger['name'];
@@ -28,7 +29,18 @@ abstract class Blogger
         }
     }
 
-
+    /**
+    * в данном примере нигде не используется но 
+    * поскольку в задании была переменная $name
+    * написал геттер
+    * @return string name
+    */
+    
+    public function getName()
+    {
+        return $this->name;
+    }
+    
     protected function isYourMessage($message)
     {
 
@@ -39,6 +51,12 @@ abstract class Blogger
     {
         $this->errors[] = "пользователя с  id = $id  не существует";
     }
+
+    /**
+    * Проверяет cуществование id
+    * @param id $message
+    * @return bool
+    */
 
     public function isCorrectId($id)
     {
